@@ -9,7 +9,7 @@ import './index.css'
 
 export const metadata: Metadata = {
   title: 'cekrause',
-  description: 'Building simple solutions for complex problems.'
+  description: 'A simple web signature.'
 }
 
 const sans = Manrope({

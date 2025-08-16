@@ -1,3 +1,3 @@
 # cekrause
 
-Building simple solutions for complex problems.
+A simple web signature.
