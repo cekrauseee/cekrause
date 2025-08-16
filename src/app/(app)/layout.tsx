@@ -1,5 +1,7 @@
 import { LanguageProvider } from '@/providers/language'
 import { languageSchema } from '@/utils/schemas'
+import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import type { Metadata } from 'next'
 import { Manrope } from 'next/font/google'
 import { cookies, headers } from 'next/headers'
@@ -27,6 +29,8 @@ export default async function Layout({ children }: Readonly<{ children: React.Re
     <html lang={language}>
       <body className={sans.variable}>
         <LanguageProvider language={language}>{children}</LanguageProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
