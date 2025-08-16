@@ -1,0 +1,31 @@
+@import 'tailwindcss';
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-manrope);
+}
+
+:root {
+  --background: hsl(0 0% 96.1%);
+  --foreground: hsl(0 0% 9%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: hsl(0 0% 9%);
+    --foreground: hsl(0 0% 96.1%);
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground selection:bg-foreground selection:text-background font-sans antialiased;
+  }
+}
+
+@layer components {
+  .button {
+    @apply cursor-pointer font-medium underline-offset-4 outline-none hover:underline focus-visible:underline data-[selected=true]:underline;
+  }
+}
